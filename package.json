@@ -1,0 +1,46 @@
+{
+  "name": "com.xrdevbr.movioladigest",
+  "productName": "Moviola Digest",
+  "description": "Digest Videos for the Moviola Video Editor",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "0.0.1",
+  "author": "kevinagnes",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "build-all": "npm run build-mac && npm run build-win64",
+    "build-mac": "electron-forge make -- --platform darwin --arch=universal",
+    "build-macarm64": "electron-forge make -- --platform darwin --arch arm64",
+    "build-macx64": "npm run clean && electron-forge make -- --platform darwin --arch x64",
+    "build-win64": "npm run clean && npm run install-win-x64 && npm run make-win-x64",
+    "clean": "rm -rf out",
+    "install-mac-x64": "npm install --target_arch=x64",
+    "install-mac-arm64": "npm install --target_arch=arm64",
+    "install-win-x64": "npm install --target_arch=x64",
+    "make-mac-x64": "electron-forge make -- --platform darwin --arch x64",
+    "make-mac-arm64": "electron-forge make -- --platform darwin --arch arm64",
+    "make-win-x64": "electron-forge make -- --platform win32 --arch x64",
+    "merge-mac": "npm run merge-mac-app",
+    "merge-mac-app": "./merge-mac-app.sh"
+  },
+  "dependencies": {
+    "@adb-installer/adb": "^1.0.8",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "x64": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "30.1.0"
+  }
+}

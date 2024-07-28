@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Moviola Digest</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      display: flex;               /* Enable flexbox for the whole body */
+      flex-direction: column;       /* Arrange content vertically */
+      justify-content: center;     /* Vertically center content */
+      align-items: center;         /* Horizontally center content */
+      
+    }
+    .smalltext-style {
+      font-size: 14px;  
+      white-space: pre-line;
+      /* border: 1px solid black;  */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+      border-radius: 8px;
+      margin: 20px;
+      padding: 15px
+    }
+    .smalltext-style:empty {
+      display: none; /* Hide the box when it's empty */
+    }
+
+    .centered-style {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-content: center;
+      gap: 5px; 
+    }
+    #moviola-digest {
+      margin-top: 10px; 
+    }
+
+    #proxy-settings {
+      display: none; 
+      flex-direction: column;
+      align-items: center;   
+      gap: 5px;           
+    }
+
+    #proxy-settings label {
+      display: inline-flex;   
+      align-items: center;    
+      font-size: 10px;        
+    }
+
+    #proxy-settings input[type="checkbox"] { 
+      margin-right: 5px;       
+    }
+
+    #drop-area { /* Add some padding and margin */
+      padding: 20px;
+      height: 100px;
+      margin-top: 20px; 
+      margin-bottom: 20px;
+      align-content: center;
+    }
+    #reload-button{
+      cursor: pointer;
+      width: 75vw;
+      max-width: min-content;
+      height: auto;
+    }
+    #progress-bar{
+      width: auto;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+    <div class="centered-style">
+      <img id="reload-button" src = "static/bkg.png"></img>
+      <div id="drop-area">Drag & Drop Videos Here</div>
+      <button id="start-btn" class="button-style" hidden="true">Digest</button> 
+      <div id="status" class="smalltext-style"></div>
+      <progress id="progress-bar" hidden=true""></progress>
+      <button id="continue-btn" class="button-style" hidden>Continue</button>
+      <button id="edit-settings-btn">Settings</button>
+      <div id="proxy-settings">
+        <label for="hardware-encoding">
+          <input type="checkbox" id="hardware-encoding"> Use Hardware Encoding
+        </label>
+        <label for="smart-scaling">
+          <input type="checkbox" id="smart-scaling" checked> Smart Scaling
+        </label>
+        <label for="burn-timecode">
+          <input type="checkbox" id="burn-timecode" checked> Burn Timecode
+        </label>
+        <label for="quality">Quality:</label>
+        <select id="quality">
+          <option value="verylow">Very Low</option>
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+          <option value="veryhigh">Very High</option>
+        </select>
+        <label for="resolution">Max Resolution:</label>
+        <select id="resolution">
+          <option value="1080">1080</option>
+          <option value="720">720</option>
+          <option value="480" selected>480</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+  <script src="renderer.js"></script> </body>
+</html>

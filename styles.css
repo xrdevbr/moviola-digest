@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+}
+
+@media (prefers-color-scheme: dark){
+  body { background: #333; color: white; }
+  #drop-area {background-color: rgba(0, 0, 0, 0.8);}
+}
+@media (prefers-color-scheme: light) {
+  body { background: #ddd; color: black; }
+  #drop-area {background-color: (255, 255, 255, 0.8) }
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.drag-over { /* Style for when files are being dragged over */
+  background-color: rgba(0, 255, 0, 0.2); /* Light green overlay */
+}
+
+.dropped { /* Style for when files have been dropped */
+  background-color: rgba(0, 0, 255, 0.2); /* Light blue overlay */
+}
+
+.drop-area.disabled {
+  background-color: #eee; /* Change background color */
+  opacity: 0.5;           /* Reduce opacity */
+}
+.button-style{
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: #ccc;
+  border-radius: 8px;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+#edit-settings-btn {
+  padding: 10px 20px;
+  font-size: 10px;  
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: #ccc;
+  border: #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
