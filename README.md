@@ -90,6 +90,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-For more detailed documentation and support, please visit the [Moviola Digest GitHub page](https://github.com/kevinagnes/moviola-digest).
+For more detailed documentation and support, please visit the [Moviola Digest GitHub page](https://github.com/xrdevbr/moviola-digest).
 
 Happy editing! 🎥
