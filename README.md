@@ -13,7 +13,7 @@ Moviola Digest is an Electron application designed to convert videos for use wit
 
 ### Downloading Release Binaries
 
-1. Navigate to the [Releases](https://github.com/kevinagnes/moviola-digest/releases) page of the repository.
+1. Navigate to the [Releases](https://github.com/xrdevbr/moviola-digest/releases) page of the repository.
 2. Download the appropriate release binary for your operating system:
     - **Windows**: `md-win32-x64.zip`
     - **MacOS**: `MoviolaDigest-darwin-x64.zip` or `MoviolaDigest-darwin-arm64.zip` (depending on your architecture)
